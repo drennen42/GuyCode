@@ -15,7 +15,9 @@
  */
 
 .bottom-nav {
+  background-color: #E0E0E0;
   text-align: left;
   padding-left: none;
   margin-left: none;
+  margin-bottom: 10px;
 }

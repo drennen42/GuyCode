@@ -9,5 +9,8 @@
 categories = Category.create([{name: 'ToolTime'},{name: 'Health'},{name: 'Dating'},{name: 'Tech'},{name: 'Style'},{name: 'Finance'},{name: 'Hunting'},{name: 'Guns'}])
 
 toolTime = Category.find_by(name: 'ToolTime')
-toolTime.articles.create(title: "How to build a hovercraft", body: "Cut 2 pieces of wood into circles large enough to put a chair on.  Then cut a hole in each one, just large enough to fit a leafblower barrel. ...")
+toolTime.articles.create(title: "How to build a hovercraft", body: "Cut 2 pieces of wood into circles large enough to put a chair on.  Then cut a hole in each one, just large enough to fit a leafblower barrel. ...", video_url: "https://www.youtube.com/watch?v=bcyFSyglWpY")
+
+guns = Category.find_by(name: 'Guns')
+guns.articles.create(title: "FAIL!", body: "Exactly what it sounds like.", video_url: "https://www.youtube.com/watch?v=RHhmHBKc67s")
 
