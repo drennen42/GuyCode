@@ -3,7 +3,7 @@
 <div class="container article-container">
   <div class="row">
     <div class="col-sm-12 article-title">
-      <%= @article.title %>
+      <%= Category.find(@article.category_id).name %>: <%= @article.title %>
     </div>
   </div>
   <div class="row">

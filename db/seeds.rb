@@ -14,3 +14,5 @@ toolTime.articles.create(title: "How to build a hovercraft", body: "Cut 2 pieces
 guns = Category.find_by(name: 'Guns')
 guns.articles.create(title: "FAIL!", body: "Exactly what it sounds like.", video_url: "https://www.youtube.com/watch?v=RHhmHBKc67s")
 
+health = Category.find_by(name: 'Health')
+health.articles.create(title: "Eat Health Foods", body: "Cookie Monster says it best.", video_url: "https://www.youtube.com/watch?v=KBMxpDbp51A")

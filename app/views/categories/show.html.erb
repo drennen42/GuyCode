@@ -1,32 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 
-  <div class="container article-container">
-    <div class="row">
-      <div class="col-sm-12 category-title">
-        <strong><%= @category.name %></strong>
-      </div>
+<div class="container article-container">
+  <div class="row">
+    <div class="col-sm-12 category-title">
+      <strong><%= @category.name %></strong>
     </div>
-    <!-- </div> -->
+  </div>
+  <!-- </div> -->
 
-    <br>
-    <br>
-    <!-- <div class="container"> -->
-    <div class="row">
-      <div class="col-sm-12">
-        <% @category.articles.each do |article| %>
-          <div class="category-article">
-            <p><strong><%= article.title %></strong></p>
-            <p><%= article.body %></p>
-            <!-- <%= link_to 'Edit', edit_article_path(article) %> -->
-          </div>
-        <% end %>
-      </div>
+  <br>
+  <br>
+  <!-- <div class="container"> -->
+  <div class="row">
+    <% @category.articles.each do |article| %>
+    <div class="col-sm-3 category-article">
+      <strong><%= link_to article.title, article %></strong>
+          <!-- <p><%= article.body %></p> -->
+          <!-- <%= link_to 'Edit', edit_article_path(article) %> -->
     </div>
+    <% end %>
+  </div>
   <br>
   <%= link_to 'New Article', new_article_path(@category) %> |
-<% if @category.articles.length != 0 %>
-  <!-- <%= link_to 'Edit', edit_category_path(@category) %> | -->
-  <%= link_to 'Back', categories_path %>
-<% end %>
+  <% if @category.articles.length != 0 %>
+    <!-- <%= link_to 'Edit', edit_category_path(@category) %> | -->
+    <%= link_to 'Back', categories_path %>
+  <% end %>
 </div>
