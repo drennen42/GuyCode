@@ -1,42 +1,38 @@
 <br>
 <div class="container">
-  <div class="row categories-row">
-    <h1>Good Elite Gallant Gents (Good EGGs)</h1>
-    <!-- <h1>Categories</h1> -->
-    <div class="col-sm-2">
+  <div class="row title">
+    <div class="col-sm-12">
+      <h1>Good Elite Gallant Gents (Good EGGs)</h1>
     </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row categories-row">
+    <div class="col-sm-12 col-sm-offset-1">
     <% @categories.each do |category| %>
       <div class="col-sm-1 col-xs-3 categories">
         <%= link_to category.name, category %>
       </div>
     <% end %>
-    <div class="col-sm-2">
     </div>
-  <br>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <!-- <div class="col-sm-2 col-xs-0">
-    </div> -->
-    <div class="col-sm-12 col-xs-12 homepage-images image-responsive">
-      <%= image_tag "AmericanFlag.jpeg", alt: "America", class: "homepage-image image-responsive" %>
-    </div>
-    <!-- <div class="col-sm-2 col-xs-0">
+    <!-- <div class="col-sm-2">
     </div> -->
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <!-- <div class="col-sm-3">
-    </div> -->
     <div class="col-sm-12 col-xs-12 homepage-images image-responsive">
       <%= image_tag "TrueGentleman.jpeg", class: "homepage-image image-responsive" %>
     </div>
-   <!--  <div class="col-sm-3">
-    </div> -->
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-xs-12 homepage-images image-responsive">
+      <%= image_tag "AmericanFlag.jpeg", alt: "America", class: "homepage-image image-responsive" %>
+    </div>
   </div>
 </div>
 
@@ -61,7 +57,7 @@
     <% end %>
   </tbody>
 </table>
-
+-->
 
 <%= link_to 'New Category', new_category_path %>
-<br> -->
+

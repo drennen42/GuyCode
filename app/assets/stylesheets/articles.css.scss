@@ -6,8 +6,11 @@
 }
 
 .articles-row {
-  background-color: #E0E0E0;
+  background-color: rgba(219,219,219,.8);
   text-align: center;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .articles {
@@ -43,14 +46,14 @@
 }
 
 .article-body {
-  // left: 100px;
   text-align: left;
   color: #B35604;
   font-size: 15px;
+  margin-bottom: 2%;
 }
 
 .article-container {
-  background-color: #E0E0E0;
+  background-color: rgba(219,219,219,.8);
 }
 
 .field  {

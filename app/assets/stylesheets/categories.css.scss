@@ -4,7 +4,8 @@
 body {
   // background-image: url('AmericanFlag.jpeg');
   // background-image: url('pub_bckrnd.jpg');
-  background-image: url('http://louderthanwar.com/wp-content/uploads/Gentlemans-Dub-Club-596x396.jpg');
+  // background-image: url('http://louderthanwar.com/wp-content/uploads/Gentlemans-Dub-Club-596x396.jpg');
+  background-image: url('pool_table.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -12,22 +13,23 @@ body {
 
 .categories-row {
   // padding-left: 15%;
-  background-color: #E0E0E0;
-  // background-color: rgba(179,86,4,.4);
+  background-color: rgba(219,219,219,.8);
   color: #B35604;
   text-align: center;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin: 0;
 }
 
 .categories {
   height: 30px;
-  background-color: #E0E0E0;
-  // background-color: rgba(179,86,4,.4);
+  background-color: rgba(219,219,219,.8);
   color: #B35604;
   text-align: center;
   padding-top: .25em;
   border: 1px solid black;
-  margin: 1em 0 1em 0;
+  margin: 0.5em 0 0.5em 0;
 }
 
 .homepage-images {
@@ -54,4 +56,17 @@ body {
 .category-article {
   color: #B35604;
   font-size: 15px;
+  margin: 0.5%;
+  text-align: center;
+}
+
+.title {
+  // padding-left: 15%;
+  background-color: rgba(219,219,219,.8);
+  color: #B35604;
+  text-align: center;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin: 0;
 }
