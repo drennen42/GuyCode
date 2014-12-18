@@ -25,16 +25,23 @@ body {
   // background-color: rgba(179,86,4,.4);
   color: #B35604;
   text-align: center;
-  padding-top: 4px;
+  padding-top: .25em;
   border: 1px solid black;
-  margin: 10px 0 10px 0;
+  margin: 1em 0 1em 0;
+}
+
+.homepage-images {
+  // left: 2em;
+  opacity: .8;
+  margin-top: 1em;
+  text-align: center;
+  // margin: 1.5em;
+  // position: absolute;
 }
 
 .homepage-image {
-  opacity: .8;
-  margin-top: 10px;
-  text-align: center;
-  margin: 15px;
+  width: 75%;
+  height: auto;
 }
 
 .category-title {

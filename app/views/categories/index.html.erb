@@ -5,7 +5,7 @@
     <div class="col-sm-2">
     </div>
     <% @categories.each do |category| %>
-      <div class="col-sm-1 categories">
+      <div class="col-sm-1 col-xs-3 categories">
         <%= link_to category.name, category %>
       </div>
     <% end %>
@@ -17,25 +17,25 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-2">
+    <!-- <div class="col-sm-2 col-xs-0">
+    </div> -->
+    <div class="col-sm-12 col-xs-12 homepage-images image-responsive">
+      <%= image_tag "AmericanFlag.jpeg", alt: "America", class: "homepage-image image-responsive" %>
     </div>
-    <div class="col-sm-8 homepage-image">
-      <%= image_tag "AmericanFlag.jpeg", alt: "America", class: "homepage-image" %>
-    </div>
-    <div class="col-sm-2">
-    </div>
+    <!-- <div class="col-sm-2 col-xs-0">
+    </div> -->
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-3">
+    <!-- <div class="col-sm-3">
+    </div> -->
+    <div class="col-sm-12 col-xs-12 homepage-images image-responsive">
+      <%= image_tag "TrueGentleman.jpeg", class: "homepage-image image-responsive" %>
     </div>
-    <div class="col-sm-6 homepage-image">
-      <%= image_tag "TrueGentleman.jpeg" %>
-    </div>
-    <div class="col-sm-3">
-    </div>
+   <!--  <div class="col-sm-3">
+    </div> -->
   </div>
 </div>
 
