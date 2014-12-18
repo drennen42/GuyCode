@@ -14,15 +14,18 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="video-container">
-        <%= @article.embed(@article.video_url) %>
+
+<% if @article.video_url != nil %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="video-container">
+          <%= @article.embed(@article.video_url) %>
+        </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
 
 <div class="container article-container">
   <div class="row">
