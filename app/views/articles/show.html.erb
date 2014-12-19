@@ -1,16 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container article-container">
-  <div class="row">
-    <div class="col-sm-12 article-title">
-      <%= Category.find(@article.category_id).name %>: <%= @article.title %>
+<div class="container">
+  <div class="row title">
+    <div class="col-sm-12">
+      <h1><%= Category.find(@article.category_id).name %>: <%= @article.title %></h1>
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-12 article-body">
+</div>
+
+<div class="container">
+  <div class="row article-body">
+    <div class="col-sm-12">
       <strong>Do it:</strong>
       <br>
       <%= @article.body %>
+      <br>
     </div>
   </div>
 </div>
@@ -27,9 +31,9 @@
   </div>
 <% end %>
 
-<div class="container article-container">
-  <div class="row">
-    <div class="col-sm-12 bottom-nav">
+<div class="container">
+  <div class="row bottom-nav">
+    <div class="col-sm-12">
       <%= link_to 'Edit', edit_article_path(@article) %> |
       <%= link_to 'Back', articles_path %>
       <!-- <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %> -->
