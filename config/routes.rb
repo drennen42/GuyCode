@@ -1,8 +1,20 @@
 Rails.application.routes.draw do
-  resources :categories
+  # get 'sessions/new'
+
+  # get 'sessions/create'
+
+  # get 'sessions/destroy'
+
+  resources :users, except: [:destroy, :index]
+
+  resources :categories, except: [:destroy]
 
   resources :articles
   root 'categories#index'
+
+  # get 'log_in', to: 'sessions#create', as: :login
+  post 'log_in', to: 'sessions#create', as: :login
+  get 'log_out', to: 'sessions#destroy', as: :logout
 
 
   # The priority is based upon order of creation: first created -> highest priority.

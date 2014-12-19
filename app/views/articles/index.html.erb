@@ -18,11 +18,12 @@
   </div>
 </div>
 
-
-<div class="container">
-  <div class="row bottom-nav">
-    <div class="col-sm-12">
-      <%= link_to 'New Article', new_article_path %>
+<% if current_user %>
+  <div class="container">
+    <div class="row bottom-nav">
+      <div class="col-sm-12">
+        <%= link_to 'New Article', new_article_path %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>

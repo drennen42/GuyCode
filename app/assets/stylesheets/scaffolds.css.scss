@@ -6,6 +6,9 @@ body {
   line-height: 18px;
 }
 
+h1 {
+  color: red;
+}
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -52,6 +55,9 @@ div {
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
+  h1 {
+    color: red;
+  }
   h2 {
     text-align: left;
     font-weight: bold;
