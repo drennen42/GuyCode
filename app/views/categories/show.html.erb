@@ -1,10 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+<% if @category.name == "Style" %>
+  <script>
+    $("body").css("background-image", "url('https://41.media.tumblr.com/tumblr_mdc185t2191r1qhgko1_500.jpg')")
+  </script>
+<% end %>
+
 
 <div class="container">
   <div class="row title">
     <div class="col-sm-12 category-title">
       <strong><%= @category.name %></strong>
+      <br><br>
     </div>
   </div>
 </div>

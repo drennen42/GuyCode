@@ -1,38 +1,41 @@
-<div class="container">
-  <div class="row title">
-    <div class="col-sm-12">
-      <h1>Good Elite Gallant Gents (Good EGGs)</h1>
-    </div>
-  </div>
+<div class="container full-page" style="background-image: url('http://s2.insidehook.com/2014/06/2349/feature-original-428x256.jpg')">
 </div>
 
-
-<div class="container">
-  <div class="row categories-row">
-    <div class="col-sm-12 col-sm-offset-1">
-    <% @categories.each do |category| %>
-      <div class="col-sm-1 col-xs-3 categories">
-        <%= link_to category.name, category %>
+  <div class="container">
+    <div class="row title">
+      <div class="col-sm-12">
+        <h1>Good Elite Gallant Gents (Good EGGs)</h1>
       </div>
-    <% end %>
     </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-xs-12 homepage-images image-responsive">
-      <%= image_tag "TrueGentleman.jpeg", class: "homepage-image image-responsive" %>
+
+  <div class="container">
+    <div class="row categories-row">
+      <div class="col-sm-12 col-sm-offset-1">
+      <% @categories.each do |category| %>
+        <div class="col-sm-1 col-xs-3 categories">
+          <%= link_to category.name, category %>
+        </div>
+      <% end %>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-xs-12 homepage-images image-responsive">
-      <%= image_tag "AmericanFlag.jpeg", alt: "America", class: "homepage-image image-responsive" %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-xs-12 homepage-images image-responsive">
+        <%= image_tag "TrueGentleman.jpeg", class: "homepage-image image-responsive" %>
+      </div>
     </div>
   </div>
-</div>
 
-<%= link_to 'New Category', new_category_path %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-xs-12 homepage-images image-responsive">
+        <%= image_tag "AmericanFlag.jpeg", alt: "America", class: "homepage-image image-responsive" %>
+      </div>
+    </div>
+  </div>
+
+  <%= link_to 'New Category', new_category_path %>
