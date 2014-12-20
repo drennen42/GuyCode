@@ -38,4 +38,6 @@
     </div>
   </div>
 
+<% if current_user && current_user.level == 4242 %>
   <%= link_to 'New Category', new_category_path %>
+<% end %>

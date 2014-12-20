@@ -6,17 +6,40 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row articles-row">
-    <div class="col-sm-12 col-sm-offset-2">
-      <% @articles.each do |article| %>
-        <div class="col-sm-4 col-xs-12 articles">
-          <strong><%= link_to article.title, article %></strong>
-        </div>
-      <% end %>
+<% if current_user && current_user.level == 4242 %>
+  <div class="container">
+    <div class="row articles-row">
+      <div class="col-sm-12 col-sm-offset-2">
+        <% @articles.each do |article| %>
+          <% if article.approved %>
+            <div class="col-sm-4 col-xs-12 articles" style="background-color: lightgreen">
+              <strong><%= link_to article.title, article %></strong>
+            </div>
+          <% else %>
+            <div class="col-sm-4 col-xs-12 articles" style="background-color: red">
+              <strong><%= link_to article.title, article %></strong>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
+<% elsif current_user == nil || current_user.level != 4242 %>
+<div class="container">
+    <div class="row articles-row">
+      <div class="col-sm-12 col-sm-offset-2">
+        <% @articles.each do |article| %>
+          <% if article.approved == true %>
+            <div class="col-sm-4 col-xs-12 articles">
+              <strong><%= link_to article.title, article %></strong>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 
 <% if current_user %>
   <div class="container">

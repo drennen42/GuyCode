@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
+    @article.user = current_user
     puts @category
 
     respond_to do |format|
@@ -71,6 +72,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :body, :category_id, :video_url, :picture)
+      params.require(:article).permit(:title, :body, :category_id, :video_url, :picture, :approved)
     end
 end

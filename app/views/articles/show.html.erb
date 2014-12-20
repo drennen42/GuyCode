@@ -31,6 +31,20 @@
   </div>
 <% end %>
 
+<% if current_user.level == 4242 %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <%= form_for(@article) do |f| %>
+          <%= f.label :approved %><br>
+          <%= f.check_box :approved %><br>
+          <%= f.submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 <div class="container">
   <div class="row bottom-nav">
     <div class="col-sm-12">
