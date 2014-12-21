@@ -52,9 +52,20 @@
       <div class="col-sm-3">
       </div>
       <div class="col-sm-6 field">
-      <%= f.label :video_url %><br>
-      <%= f.text_field :video_url %>
+        <%= f.label :video_url %><br>
+        <%= f.text_field :video_url %>
+      </div>
+      <div class="col-sm-3">
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-6 field">
+        <%= f.label :picture %><br>
+        <%= f.file_field :picture %>
+      </div>
       <div class="col-sm-3">
       </div>
     </div>
@@ -67,6 +78,6 @@
       </div>
       <div class="col-sm-3">
       </div>
-
+    </div>
   <% end %>
 </div>

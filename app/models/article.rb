@@ -1,5 +1,7 @@
 include ActionView::Helpers::TagHelper
 class Article < ActiveRecord::Base
+  mount_uploader :picture, PictureUploader
+
   has_many :pictures
   belongs_to :category
   belongs_to :user
