@@ -1,10 +1,20 @@
 .aside-container {
-  margin-top: 0.5em;
+  // margin-top: 0.5em;
 }
 
 .aside {
+  height: 100%;
   background-color: rgba(219,219,219,.8);
-  border: 1px solid black;
+  // border: 1px solid black;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  padding: 0;
+}
+
+.aside-child {
+  background-color: rgba(219,219,219,.8);
+  // border: 1px solid black;
   margin: 0;
   text-align: center;
   text-decoration: none;
@@ -14,12 +24,13 @@
 .aside-link {
   text-align: center;
   padding: 0;
-  margin: 0.5em;
+  margin-top: 0.5em;
   border: 1px solid black;
 }
 
 div.login-form {
   display: none;
+  // z-index: 3;
 }
 
 div.sign-up-form {

@@ -10,4 +10,9 @@ class Article < ActiveRecord::Base
     video_url = youtube_url.split("=").last
     content_tag(:iframe, nil, src: "//www.youtube.com/embed/#{video_url}", class: "video")
   end
+
+  def nl2br(s)
+    s.gsub(/\n/, '<br>')
+  end
+
 end

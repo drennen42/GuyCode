@@ -12,8 +12,8 @@
   <div class="row article-body">
     <div class="col-sm-12">
       <strong>Do it:</strong>
-      <br>
-      <%= @article.body %>
+      <br><br>
+      <%= simple_format h @article.body %>
       <br>
     </div>
   </div>
@@ -64,7 +64,9 @@
 <div class="container">
   <div class="row bottom-nav">
     <div class="col-sm-12">
-      <%= link_to 'Edit', edit_article_path(@article) %> |
+      <% if current_user && current_user.level == 4242 %>
+        <%= link_to 'Edit', edit_article_path(@article) %> |
+      <% end %>
       <%= link_to 'Back', articles_path %>
       <!-- <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %> -->
     </div>
