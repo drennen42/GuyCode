@@ -20,19 +20,21 @@
 </div>
 
 <% if @article.picture != nil %>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-sm-offset-1">
-        <div class="col-sm-6">
-          <% if [".mov", ".mp4", ".m4a"].any? { |str| @article.picture.to_s.downcase.include?(str) } %>
-            <%= video_tag(@article.picture, controls: true) %>
-          <% else %>
-            <%= image_tag(@article.picture) %>
-          <% end %>
+  <% @article.picture.each do |picture| %>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-sm-offset-2">
+          <div class="col-sm-8">
+            <% if [".mov", ".mp4", ".m4a"].any? { |str| picture.to_s.downcase.include?(str) } %>
+              <%= video_tag(picture, controls: true) %>
+            <% else %>
+              <%= image_tag(picture) %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  <% end %>
 <% end %>
 
 <% if @article.video_url != nil && @article.video_url != "" %>

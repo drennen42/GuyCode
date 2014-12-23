@@ -14,13 +14,13 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    current_user = current_user
-    if current_user
+    # current_user = current_user
+    # if current_user
       @article = Article.new
-    else
-      flash[:notice] = "You must be logged in to access this section"
-      redirect_to root_path
-    end
+    # else
+    #   flash[:notice] = "You must be logged in to access this section"
+    #   redirect_to root_path
+    # end
   end
 
   # GET /articles/1/edit

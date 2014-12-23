@@ -52,3 +52,4 @@ gem 'faker'
 gem "mini_magick"
 gem "carrierwave"
 gem 'font-awesome-sass'
+gem 'acts_as_tree'

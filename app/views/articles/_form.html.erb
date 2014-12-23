@@ -17,7 +17,7 @@
       </div>
       <div class="col-sm-6 field">
         <%= f.label :category_id %><br>
-        <%= f.select(:category_id, Category.all.map {|c| [c.name,c.id]}, :selected => Category.first.id) %>
+        <%= f.select(:category_id, Category.all.map {|c| [c.name,c.id]}, :selected => @article.category_id) %>
       </div>
       <div class="col-sm-3">
       </div>
@@ -64,7 +64,7 @@
       </div>
       <div class="col-sm-6 field">
         <%= f.label :picture %><br>
-        <%= f.file_field :picture %>
+        <%= f.file_field :picture, multiple: true %>
       </div>
       <div class="col-sm-3">
       </div>

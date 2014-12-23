@@ -79,8 +79,8 @@
   <div class="row aside">
     <div class="row categories-row">
       <div class="col-sm-12 col-sm-offset-1">
-        <% @categories = Category.all %>
-        <% @categories.each do |category| %>
+        <!-- <% @categories = Category.all %> -->
+        <% for category in Category.roots %>
           <div class="col-sm-1 col-xs-6 categories">
             <%= link_to category.name, category %>
           </div>

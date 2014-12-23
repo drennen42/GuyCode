@@ -8,8 +8,15 @@
 
 
 <div class="container">
-  <div class="row title">
-    <div class="col-sm-12 category-title">
+  <div class="row aside submenu">
+    <div class="col-sm-2 col-xs-6 col-sm-offset-1 categories">
+      <% for category in @category.children %>
+        <u><%= link_to category.name, category %></u><br>
+      <% end %>
+    </div>
+    <!-- </div> -->
+   <!-- <div class="row title"> -->
+    <div class="col-sm-6 category-title">
       <strong><%= @category.name %></strong>
       <br><br>
     </div>

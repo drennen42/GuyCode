@@ -19,7 +19,7 @@
   padding-bottom: 66.666666666667%; /* 960px/1440px */
   background-image: url('http://lawrencemenswear.com/sites/default/files/Tuxedo01_0.jpg');
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-attachment: fixed;
   background-position:center; /* IE fix */
 }
@@ -28,7 +28,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  height: 66.666666666667%;
 }
 
 .bottom-nav {
