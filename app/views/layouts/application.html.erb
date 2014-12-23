@@ -28,10 +28,11 @@
     ga('send', 'pageview');
   </script>
 
-  <%= render partial: "layouts/header" %>
+  <div class="responsive-background-image">
+    <%= render partial: "layouts/header" %>
 
-  <%= yield %>
-
+    <%= yield %>
+  </div>
   <!-- <br> -->
 </body>
 </html>
