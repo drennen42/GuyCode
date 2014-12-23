@@ -6,16 +6,17 @@
   </script>
 <% end %>
 
-
 <div class="container">
   <div class="row aside submenu">
-    <div class="col-sm-2 col-xs-6 col-sm-offset-1 categories">
+    <% unless @category.children.empty? %>
       <% for category in @category.children %>
-        <u><%= link_to category.name, category %></u><br>
+        <div class="col-sm-2 col-xs-6 col-sm-offset-1 categories">
+          <%= link_to category.name, category %>
+        </div>
       <% end %>
-    </div>
-    <!-- </div> -->
-   <!-- <div class="row title"> -->
+    <% end %>
+  </div>
+  <div class="row title">
     <div class="col-sm-6 category-title">
       <strong><%= @category.name %></strong>
       <br><br>
