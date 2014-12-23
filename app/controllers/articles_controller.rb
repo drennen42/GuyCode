@@ -14,8 +14,13 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    p @category
-    @article = Article.new
+    current_user = current_user
+    if current_user
+      @article = Article.new
+    else
+      flash[:notice] = "You must be logged in to access this section"
+      redirect_to root_path
+    end
   end
 
   # GET /articles/1/edit
@@ -26,8 +31,6 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-    # @article.user = current_user
-    puts @category
 
     respond_to do |format|
       if @article.save

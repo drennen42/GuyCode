@@ -14,7 +14,13 @@ class CategoriesController < ApplicationController
 
   # GET /categories/new
   def new
-    @category = Category.new
+    current_user = current_user
+    if current_user && current_user.level == 4242
+      @category = Category.new
+    else
+      flash[:notice] = "You must be logged in to access this section"
+      redirect_to root_path
+    end
   end
 
   # GET /categories/1/edit
