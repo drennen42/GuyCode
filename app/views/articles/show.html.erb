@@ -1,9 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<% @category = Category.find(@article.category_id) %>
 <div class="container">
   <div class="row title">
     <div class="col-sm-12">
-      <h1><%= Category.find(@article.category_id).name %>: <%= @article.title %></h1>
+      <% unless @category.ancestors.empty? %>
+        <% for category in @category.ancestors.reverse %>
+          <h2><%= link_to category.name, category %> &gt;
+        <% end %>
+      <% end %>
+      <%= link_to Category.find(@article.category_id).name %>: <%= @article.title %></h2>
     </div>
   </div>
 </div>
@@ -20,21 +26,19 @@
 </div>
 
 <% if @article.picture != nil %>
-  <% @article.picture.each do |picture| %>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-sm-offset-2">
-          <div class="col-sm-8">
-            <% if [".mov", ".mp4", ".m4a"].any? { |str| picture.to_s.downcase.include?(str) } %>
-              <%= video_tag(picture, controls: true) %>
-            <% else %>
-              <%= image_tag(picture) %>
-            <% end %>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-sm-offset-2">
+        <div class="col-sm-8">
+          <% if [".mov", ".mp4", ".m4a"].any? { |str| @article.picture.to_s.downcase.include?(str) } %>
+            <%= video_tag(@article.picture, controls: true) %>
+          <% else %>
+            <%= image_tag(@article.picture) %>
+          <% end %>
         </div>
       </div>
     </div>
-  <% end %>
+  </div>
 <% end %>
 
 <% if @article.video_url != nil && @article.video_url != "" %>

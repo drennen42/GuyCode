@@ -22,6 +22,11 @@
       <br><br>
     </div>
   </div>
+  <div class="row submenu breadcrumbs">
+    <% for category in @category.ancestors.reverse %>
+      <%= link_to category.name, category %> &gt;
+      <% end %>
+  </div>
 </div>
 
 <div class="container">
