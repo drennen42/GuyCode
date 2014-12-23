@@ -7,17 +7,17 @@
 <% end %>
 
 <div class="container">
-  <div class="row aside submenu">
+  <div class="row submenu">
     <% unless @category.children.empty? %>
       <% for category in @category.children %>
-        <div class="col-sm-2 col-xs-6 col-sm-offset-1 categories">
+        <div class="col-sm-2 col-xs-6 categories">
           <%= link_to category.name, category %>
         </div>
       <% end %>
     <% end %>
   </div>
   <div class="row title">
-    <div class="col-sm-6 category-title">
+    <div class="col-sm-12 category-title">
       <strong><%= @category.name %></strong>
       <br><br>
     </div>
