@@ -14,13 +14,8 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    # current_user = current_user
-    # if current_user
-      @article = Article.new
-    # else
-    #   flash[:notice] = "You must be logged in to access this section"
-    #   redirect_to root_path
-    # end
+    @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: 201, acl: :public_read)
+    @article = Article.new
   end
 
   # GET /articles/1/edit
