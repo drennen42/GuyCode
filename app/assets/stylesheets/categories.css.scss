@@ -5,16 +5,34 @@ body {
   // background-image: url('AmericanFlag.jpeg');
   // background-image: url('pub_bckrnd.jpg');
   // background-image: url('http://louderthanwar.com/wp-content/uploads/Gentlemans-Dub-Club-596x396.jpg');
-  background-image: url('http://s2.insidehook.com/2014/06/2349/feature-original-428x256.jpg');
+  // background-image: url('http://s2.insidehook.com/2014/06/2349/feature-original-428x256.jpg');
+  background-image: url('tuxedo-man-silhouette.jpg');
+  // background-image: url('tuxedo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 
+.title {
+  background-color: rgba(219,219,219,.75);
+  font-family: "Lucida Console", Monaco, monospace;
+  // color: #B35604;
+  // color: black;
+  &:h1 {
+    // color: black;
+  }
+  text-align: center;
+  // border-top: 1px solid black;
+  // border-left: 1px solid black;
+  // border-right: 1px solid black;
+  margin: 0;
+  margin-top: 0.5em;
+}
+
 .categories-row {
   margin: 0;
   // background-color: rgba(219,219,219,.8);
-  color: #B35604;
+  // color: #B35604;
   text-align: center;
   // border-bottom: 1px solid black;
   // border-left: 1px solid black;
@@ -25,7 +43,7 @@ body {
 .categories {
   height: 10%;
   // background-color: rgba(219,219,219,.8);
-  color: #B35604;
+  // color: #B35604;
   text-align: center;
   padding-top: .25em;
   border: 1px solid black;
@@ -34,7 +52,7 @@ body {
 }
 
 .article-container {
-  background-color: rgba(219,219,219,.8);
+  background-color: rgba(219,219,219,.75);
 }
 
 .homepage-images {
@@ -52,36 +70,24 @@ body {
   margin: 0;
   margin-top: 0.5em;
   text-align: center;
-  color: #B35604;
+  // color: #B35604;
   font-size: 30px;
   font-weight: bold;
 }
 
 .category-article-row {
-  background-color: rgba(219,219,219,.8);
+  background-color: rgba(219,219,219,.75);
   margin: 0;
-}
-
-.category-article-row {
-  background-color: rgba(219,219,219,.8);
-  margin: 0;
+  // margin-bottom: 0.25em;
 }
 
 .category-article {
-  border: 2px solid #B35604;
+  border: 2px solid black;
   margin: 0;
-  color: #B35604;
+  margin-right: 0.25em;
+  // color: #B35604;
   font-size: 15px;
   margin-top: 0.5em;
+  margin-bottom: 0.5em;
   text-align: center;
-}
-
-.title {
-  background-color: rgba(219,219,219,.8);
-  color: #B35604;
-  text-align: center;
-  // border-top: 1px solid black;
-  // border-left: 1px solid black;
-  // border-right: 1px solid black;
-  margin: 0;
 }

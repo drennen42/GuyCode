@@ -3,10 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .articles-row {
-  background-color: rgba(219,219,219,.8);
+  background-color: rgba(219,219,219,.75);
   text-align: center;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  // border-left: 1px solid black;
+  // border-right: 1px solid black;
   margin: 0;
 }
 
@@ -36,14 +36,15 @@
 .article-title {
   // background-color: rgba(219,219,219,.8);
   margin: 0;
+  font-family: "Lucida Console", Monaco, monospace;
   text-align: center;
-  color: #B35604;
+  // color: #B35604;
   font-size: 30px;
   font-weight: bold;
 }
 
 .article-body {
-  background-color: rgba(219,219,219,.8);
+  background-color: rgba(219,219,219,.75);
   margin: 0;
   padding: 0;
   border-left: 1px solid black;
