@@ -63,8 +63,8 @@
       <div class="col-sm-3">
       </div>
       <div class="col-sm-6 field">
-        <% unless @user.has_avatar_upload? %>
-          <%= link_to "Upload Avatar", new_avatar_path %>
+        <% unless @article.has_picture_upload? %>
+          <%= link_to "Upload Picture", new_picture_path %>
         <% end %>
 
         <%= f.hidden_field :key %>
@@ -74,16 +74,7 @@
     </div>
 
 
-    <div class="row">
-      <div class="col-sm-3">
-      </div>
-      <div class="col-sm-6 field">
-        <%= f.label :picture %><br>
-        <%= f.file_field :picture, multiple: true %>
-      </div>
-      <div class="col-sm-3">
-      </div>
-    </div>
+
 
     <div class="row">
       <div class="col-sm-3">
