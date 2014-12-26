@@ -30,7 +30,11 @@
     <div class="row">
       <div class="col-sm-12 col-sm-offset-2">
         <div class="col-sm-8">
-          <%= image_tag(@article.picture) if @article.picture? %>
+          <% if [".mov", ".mp4", ".m4a", ".gif"].any? { |str| @article.picture.to_s.downcase.include?(str) } %>
+            <%= video_tag(@article.picture, controls: true) %>
+          <% else %>
+            <%= image_tag(@article.picture) %>
+          <% end %>
         </div>
       </div>
     </div>
