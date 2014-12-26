@@ -51,7 +51,7 @@ gem 'rails_12factor', group: :production
 gem 'faker'
 gem "mini_magick"
 gem "carrierwave"
-gem 'carrierwave_direct'
+# gem 'carrierwave_direct'
 gem 'font-awesome-sass'
 gem 'acts_as_tree'
 gem 'aws-sdk'
