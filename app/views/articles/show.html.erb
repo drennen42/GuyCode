@@ -30,7 +30,7 @@
     <div class="row">
       <div class="col-sm-12 col-sm-offset-2">
         <div class="col-sm-8">
-          <p>This is where the picture should be. </p>
+          <%= image_tag(@article.picture_url) if @article.picture? %>
         </div>
       </div>
     </div>

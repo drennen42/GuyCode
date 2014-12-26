@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :categories, except: [:destroy]
 
+  resource :pictures, :only => :new
+
   resources :articles
   root 'categories#index'
 
