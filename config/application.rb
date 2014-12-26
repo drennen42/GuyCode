@@ -19,5 +19,13 @@ module GuyCode
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # def authenticate
+    #   if APP_CONFIG['perform_authentication']
+    #     authenticate_or_request_with_http_basic do | S3_BUCKET_NAME, AWS_SECRET_KEY, AWS_ACCESS_KEY |
+    #       S3_BUCKET_NAME == APP_CONFIG['S3_BUCKET_NAME'] && AWS_SECRET_KEY == APP_CONFIG['AWS_SECRET_KEY'] && AWS_ACCESS_KEY == APP_CONFIG['AWS_ACCESS_KEY']
+    #     end
+    #   end
+    # end
   end
 end

@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: 201, acl: :public_read)
+    @s3_direct_post = APP_CONFIG['S3_BUCKET_NAME'].presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: 201, acl: :public_read)
     @article = Article.new
   end
 

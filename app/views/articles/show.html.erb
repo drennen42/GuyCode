@@ -25,16 +25,12 @@
   </div>
 </div>
 
-<% if @article.picture != nil %>
+<% if @article.picture != nil  %>
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-sm-offset-2">
         <div class="col-sm-8">
-          <% if [".mov", ".mp4", ".m4a"].any? { |str| @article.picture.to_s.downcase.include?(str) } %>
-            <%= video_tag(@article.picture, controls: true) %>
-          <% else %>
-            <%= image_tag(@article.picture) %>
-          <% end %>
+          <p>This is where the picture should be. </p>
         </div>
       </div>
     </div>
